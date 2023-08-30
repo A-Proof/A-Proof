@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Background Color Changer</title>
+  <link rel="stylesheet" href="bgcolorchanger.css">
+  <style>
+    /* Additional CSS styles for the background changer */
+    .background-changer {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: white;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .background-changer label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .background-changer input[type="color"] {
+      width: 100px;
+      padding: 5px;
+      border: none;
+    }
+
+    /* Additional CSS styles for the link */
+    .back-link {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      text-decoration: none;
+      color: #333;
+    }
+
+    /* Additional CSS styles for the menu */
+    .menu {
+      background-color: #f0f0f0;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    .menu ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+    }
+
+    .menu ul li {
+      margin-right: 20px;
+    }
+
+    .menu ul li:last-child {
+      margin-right: 0;
+    }
+
+    .menu ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img src="a-prooflogo.jpeg" alt="A-Proof Lab Logo">
+    <h1 class="title">Welcome to A-Proof Labs</h1>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gift_card.html">Redeem</a></li>
+        <li><a href="videos.html">Other Videos</a></li>
+        <li><a href="math_studies.html">Math and Studies</a></li>
+        <li><a href="ourgoals.html">Our Goals</a></li>
+        <li><a href="findmaps.html">Find Maps</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="background-changer">
+    <label for="colorPicker">Change Background Color:</label>
+    <input type="color" id="colorPicker">
+  </div>
+
+  <a class="back-link" href="index.html">Back to Home</a>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const colorPicker = document.getElementById("colorPicker");
+
+      colorPicker.addEventListener("input", function(event) {
+        const selectedColor = event.target.value;
+        document.body.style.backgroundColor = selectedColor;
+      });
+    });
+  </script>
+</body>
+</html>

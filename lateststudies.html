@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Latest Studies</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  .video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  .content {
+    padding: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
+    margin: 100px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+  }
+</style>
+</head>
+<body>
+<div class="video-container">
+  <video autoplay muted loop>
+    <source src="studiesbg.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+<div class="content">
+  <h1>Latest Studies</h1>
+  <p>Welcome to the Latest Studies page, where we explore cutting-edge research and discoveries in the world of science. Stay tuned for updates on a wide range of fascinating topics!</p>
+</div>
+</body>
+</html>

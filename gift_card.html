@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gift Card Redemption</title>
+<link rel="stylesheet" type="text/css" href="stylecard.css">
+
+</head>
+<body>
+  <div class="header">
+    <img src="a-prooflogo.jpeg" alt="A-Proof Lab Logo">
+    <h1 class="title">Welcome to A-Proof Labs</h1>
+    <nav class="menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+  <li><a href="videos.html">Other Videos</a></li>
+        <li><a href="math_studies.html">Math and Studies</a></li>
+        <li><a href="ourgoals.html">Our Goals</a></li>        <li><a href="findmaps.html">Find Maps</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+    </nav>
+  </div>
+
+<img src="cards.jpeg" alt="Cards">
+
+    <h1>Gift Card Redemption</h1>
+    <label for="giftcard">Enter your gift card code:</label><br>
+    <input type="text" id="giftcard" name="giftcard"><br><br>
+    <button onclick="redeem()">Redeem</button>
+
+    <p id="message"></p>
+
+    <script>
+        function redeem() {
+            var giftcard = document.getElementById("giftcard").value;
+            var validCodes = ["123A-4TY8-R532-12FR", "123B-5TY9-R533-13FS", "123C-6TY0-R534-14FT", "123D-7TY1-R535-15FU", "123E-8TY2-R536-16FV", "123F-9TY3-R537-17FW", "123G-0TY4-R538-18FX", "123H-1TY5-R539-19FY", "123I-2TY6-R540-20FZ"];
+            if (validCodes.includes(giftcard)) {
+                document.getElementById("message").innerHTML = "Gift card redeemed successfully! $20.00 left";
+            } else {
+                document.getElementById("message").innerHTML = "Invalid gift card code. Please try again.";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <title>Account Appeal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+
+        .warning-symbol {
+            color: red;
+            font-size: 48px;
+            margin-top: 20px;
+        }
+
+        .message {
+            color: black;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+
+        .appeal-box {
+            width: 80%;
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            margin-top: 30px;
+        }
+
+        #appeal-text {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: vertical;
+        }
+
+        #submit-button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .instructions {
+            text-align: left;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="warning-symbol">&#9888;</div>
+    <div class="message">
+        <p>Your account has been deleted. Use the appeal form below to have a chance at gaining it back. Otherwise, you may create a new account.</p>
+    </div>
+    <div class="appeal-box">
+        <div class="instructions">
+            <p>Instructions:</p>
+            <ol>
+                <li>Click on the appeal input box</li>
+                <li>Type your appeal with your username</li>
+                <li>Press "Submit" to open the email client</li>
+                <li>Write your appeal again to arthur.schannel.stop@gmail.com</li>
+                <li>Appeals cannot be accepted if account suspension lasted more than a week</li>
+            </ol>
+        </div>
+        <form id="appeal-form">
+            <textarea id="appeal-text" placeholder="Write your appeal here!" rows="4" required></textarea>
+            <button type="submit" id="submit-button">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        // JavaScript to handle form submission
+        document.getElementById("appeal-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            // Get the user's appeal text
+            var appealText = document.getElementById("appeal-text").value;
+
+            // Send an email to arthur.schannel.stop@gmail.com with the user's appeal
+            var emailBody = "Hello, " + "a user" + " has sent an appeal. Here is it: " + appealText;
+            window.location.href = "mailto:arthur.schannel.stop@gmail.com?subject=Account Appeal&body=" + emailBody;
+        });
+    </script>
+</body>
+</html>

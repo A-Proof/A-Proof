@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="styleslogin.css">
+  <script src="https://www.authpro.com/js/auth.js"></script>
+  <script>
+    var ap = new AuthPro('arthurteamreal');
+  </script>
+</head>
+<body>
+  <div class="container">
+    <!-- Wrap the "Login" button in an anchor element to link to index.html -->
+    <a href="index.html" class="apButton default blue ap_popup" data-action="login">Login</a>
+
+    <!-- Wrap the "Sign Up" button in an anchor element to link to index.html -->
+    <a href="index.html" class="apButton default blue ap_popup" data-action="reg">Sign Up</a>
+
+    <!-- Add a button to open the "Edit profile" popup -->
+    <button class="apButton default blue ap_popup" data-action="edit">Edit profile</button>
+
+    <!-- Optionally, you can keep the "Account Settings" link -->
+    <p class="transfer-link"><a href="#">Account Settings</a></p>
+
+    <!-- Button to go back to home (index.html) -->
+    <button class="default blue" onclick="goToHome()">Go Back to Home</button>
+
+    <!-- Button to go to the appeal page (appeal.html) -->
+    <button class="default blue" onclick="goToAppeal()">Appeal</button>
+  </div>
+
+  <script src="passwordDetector.js"></script>
+
+  <script>
+    // Function to go back to home (index.html)
+    function goToHome() {
+      window.location.href = 'index.html';
+    }
+
+    // Function to go to the appeal page (appeal.html)
+    function goToAppeal() {
+      window.location.href = 'appeal.html';
+    }
+  </script>
+</body>
+</html>
