@@ -1,5 +1,6 @@
 ### Hi there 👋
-
+Hey guys, I made this account more than 2 years ago. The science research at the A-Proof website is fake, and it may be used as a template for your web projects.
+**Regarding ModernOS, I used creative AI tools to create some elements that were very hard.** It should release today or tomorrow, but I'm sorry if you aren't satisfied.
 <!--
 **A-Proof/A-Proof** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
